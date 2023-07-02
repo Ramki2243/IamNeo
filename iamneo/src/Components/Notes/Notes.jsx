@@ -23,13 +23,18 @@ const Notes = () => {
 
     const { notes, setNotes } = useContext(DataContext);
 
+    
     const onDragEnd = (result) => {
-        if (!result.destination)
-            return;
+      if (!result.destination) return;
 
-        const items = reorder(notes, result.source.index, result.destination.index);
-        setNotes(items);
-    }
+      const items = reorder(
+        notes,
+        result.source.index,
+        result.destination.index
+      );
+      setNotes(items);
+    };
+
 
     return (
         <React.Fragment>

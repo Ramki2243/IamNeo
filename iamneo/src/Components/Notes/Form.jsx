@@ -19,7 +19,7 @@ const Container = styled(Box)`
     box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
     padding: 10px 15px;
     border-radius: 8px;
-    border-color: "#e0e0e0";
+    border-color: e0e0e0"#";
     margin: auto;
     margin-bottom: 2rem;
     min-height: 30px;

@@ -9,11 +9,12 @@ import { DataContext } from '../../Context/DataProvider';
 
 const NoteCard = styled(Card)`
     box-shadow: none;
-    border: 1px solid #e0e0e0;
+    border: 3px solid white;
     border-radius: 8px;
-
+    color: white;
+    background-color: rgb(40,40,39);
     &:hover {
-        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+        box-shadow: 0 2px 4px 0 green, 0 2px 6px 2px darkgreen;
     }
 `;
 
@@ -36,34 +37,43 @@ const Note = ({ note }) => {
     }
 
     return (
-        <NoteCard
-            onMouseEnter={() => setShowActions(true)}
-            onMouseLeave={() => setShowActions(false)}
+      <NoteCard
+        onMouseEnter={() => setShowActions(true)}
+        onMouseLeave={() => setShowActions(false)}
+      >
+        <CardContent sx={{ wordWrap: "break-word" }}>
+          <Typography>{note.title}</Typography>
+          <Typography>{note.text}</Typography>
+        </CardContent>
+        <CardActions
+          sx={{ display: "flex", justifyContent: "end", marginLeft: "auto" }}
         >
-            <CardContent sx={{ wordWrap: "break-word" }}>
-                <Typography>{note.title}</Typography>
-                <Typography>{note.text}</Typography>
-            </CardContent>
-            <CardActions sx={{ display: "flex", justifyContent: "end", marginLeft: "auto" }}>
-                <Tooltip title="Archive">
-                    <IconButton
-                        sx={{ visibility: showActions ? 'visible' : 'hidden' }}
-                        onClick={() => archiveNote(note)}
-                    >
-                        <ArchiveOutlined fontSize='small' />
-                    </IconButton>
-                </Tooltip>
-                <Tooltip title="Delete">
-                    <IconButton
-                        sx={{ visibility: showActions ? 'visible' : 'hidden' }}
-                        onClick={() => deleteNote(note)}
-                    >
-                        <DeleteOutlineOutlined fontSize='small' />
-                    </IconButton>
-                </Tooltip>
-            </CardActions>
-        </NoteCard>
-    )
+          <Tooltip title="Archive">
+            <IconButton
+              sx={{
+                visibility: showActions ? "visible" : "hidden",
+                color: showActions ? "#ffffff" : "#000000", // Set the color conditionally
+              }}
+              onClick={() => archiveNote(note)}
+            >
+              <ArchiveOutlined fontSize="small" />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip title="Delete">
+            <IconButton
+              sx={{
+                visibility: showActions ? "visible" : "hidden",
+                color: showActions ? "#ffffff" : "#000000", // Set the color conditionally
+              }}
+              onClick={() => deleteNote(note)}
+            >
+              <DeleteOutlineOutlined fontSize="small" />
+            </IconButton>
+          </Tooltip>
+        </CardActions>
+      </NoteCard>
+    );
 }
 
 export default Note;

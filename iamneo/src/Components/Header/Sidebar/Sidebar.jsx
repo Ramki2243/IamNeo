@@ -68,18 +68,7 @@ const Sidebar = () => {
 
             <Navbar open={open} handleDrawer={handleDrawer} />
 
-            <Drawer variant="permanent" open={open}>
-                <DrawerHeader></DrawerHeader>
-                <NavList open={open} setOpen={setOpen} />
-
-                {open && (
-                    <Box sx={{ position: 'absolute', bottom: 0, left: 0, right: 0, p: 2 }}>
-                        <Typography variant="body2" color="textSecondary">
-                            Created by: <Link underline='hover' href="https://github.com/TheNewC0der-24" target="_blank" rel="noopener noreferrer">Bhavya Khurana</Link>
-                        </Typography>
-                    </Box>
-                )}
-            </Drawer>
+            
         </Box>
     );
 }

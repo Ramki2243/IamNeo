@@ -8,9 +8,11 @@ import { UnarchiveOutlined, DeleteOutlineOutlined } from '@mui/icons-material';
 import { DataContext } from '../../Context/DataProvider';
 
 const ArchiveCard = styled(Card)`
-    box-shadow: none;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: white;
+  background-color: #151414;;
 `;
 
 const Archive = ({ archiveNote }) => {
@@ -32,34 +34,40 @@ const Archive = ({ archiveNote }) => {
     }
 
     return (
-        <ArchiveCard
-            onMouseEnter={() => setShowActions(true)}
-            onMouseLeave={() => setShowActions(false)}
+      <ArchiveCard
+        onMouseEnter={() => setShowActions(true)}
+        onMouseLeave={() => setShowActions(false)}
+      >
+        <CardContent sx={{ wordWrap: "break-word" }}>
+          <Typography>{archiveNote.title}</Typography>
+          <Typography>{archiveNote.text}</Typography>
+        </CardContent>
+        <CardActions
+          sx={{ display: "flex", justifyContent: "end", marginLeft: "auto" }}
         >
-            <CardContent sx={{ wordWrap: "break-word" }}>
-                <Typography>{archiveNote.title}</Typography>
-                <Typography>{archiveNote.text}</Typography>
-            </CardContent>
-            <CardActions sx={{ display: "flex", justifyContent: "end", marginLeft: "auto" }}>
-                <Tooltip title="Unarchive">
-                    <IconButton
-                        sx={{ visibility: showActions ? 'visible' : 'hidden' }}
-                        onClick={() => unarchiveNote(archiveNote)}
-                    >
-                        <UnarchiveOutlined fontSize='small' />
-                    </IconButton>
-                </Tooltip>
-                <Tooltip title="Delete">
-                    <IconButton
-                        sx={{ visibility: showActions ? 'visible' : 'hidden' }}
-                        onClick={() => deleteNote(archiveNote)}
-                    >
-                        <DeleteOutlineOutlined fontSize='small' />
-                    </IconButton>
-                </Tooltip>
-            </CardActions>
-        </ArchiveCard>
-    )
+          <Tooltip title="Unarchive">
+            <IconButton
+              sx={{
+                visibility: showActions ? "visible" : "hidden",
+                color: showActions ? "#ffffff" : "#000000", // Set the color conditionally
+              }}
+              onClick={() => unarchiveNote(archiveNote)}
+            >
+              <UnarchiveOutlined fontSize="small" />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip title="Delete">
+            <IconButton
+              sx={{ visibility: showActions ? "visible" : "hidden" }}
+              onClick={() => deleteNote(archiveNote)}
+            >
+              <DeleteOutlineOutlined fontSize="small" />
+            </IconButton>
+          </Tooltip>
+        </CardActions>
+      </ArchiveCard>
+    );
 }
 
 export default Archive;
