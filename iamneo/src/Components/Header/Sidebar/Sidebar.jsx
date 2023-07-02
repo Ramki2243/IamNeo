@@ -68,7 +68,16 @@ const Sidebar = () => {
 
             <Navbar open={open} handleDrawer={handleDrawer} />
 
-            
+            <Drawer variant="permanent" open={open}>
+                <DrawerHeader></DrawerHeader>
+                <NavList open={open} setOpen={setOpen} />
+
+                {open && (
+                    <Box sx={{ position: 'absolute', bottom: 0, left: 0, right: 0, p: 2 }}>
+                        
+                    </Box>
+                )}
+            </Drawer>
         </Box>
     );
 }
