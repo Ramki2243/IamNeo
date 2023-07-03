@@ -55,9 +55,7 @@ const Notes = () => {
                             opacity: '.1',
                             width: '120px',
                         }} />
-                        <Typography sx={{ fontSize: '1.375rem' }} align='center' variant="h6" color="#5f6368">
-                            Notes you add appear here
-                        </Typography>
+                    
                     </Box>
                 ) :
                     (

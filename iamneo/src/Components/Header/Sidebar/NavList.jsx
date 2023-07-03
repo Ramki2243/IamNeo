@@ -9,7 +9,7 @@ import {
     ListItemText,
 } from '@mui/material';
 
-import { LightbulbOutlined, ArchiveOutlined, DeleteOutlineOutlined } from '@mui/icons-material';
+import { LightbulbOutlined  } from '@mui/icons-material';
 
 import { makeStyles } from '@mui/styles';
 
@@ -42,18 +42,7 @@ const NavList = ({ open, setOpen }) => {
             icon: <LightbulbOutlined />,
             link: '/'
         },
-        {
-            id: 2,
-            label: 'Archive',
-            icon: <ArchiveOutlined />,
-            link: '/archive'
-        },
-        {
-            id: 3,
-            label: 'Trash',
-            icon: <DeleteOutlineOutlined />,
-            link: '/trash'
-        }
+                
     ];
 
     const handleDrawer = () => {
@@ -80,7 +69,7 @@ const NavList = ({ open, setOpen }) => {
                         <ListItemIcon
                             sx={{
                                 minWidth: 0,
-                                mr: open ? 3 : 'auto',
+                                mr: open ? 1 : 'auto',
                                 justifyContent: 'center',
                             }}
                             className={location.pathname === list.link ? classes.sideBarActiveIcon : null}

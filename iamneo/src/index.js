@@ -11,8 +11,8 @@ import { styled } from "@mui/material/styles";
 
 import Header from "./Components/Header/Sidebar/Sidebar";
 import Notes from "./Components/Notes/Notes";
-import Archive from "./Components/Archive/Archives";
-import Trash from "./Components/Trash/TrashNotes";
+
+
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   ...theme.mixins.toolbar,
@@ -29,8 +29,6 @@ root.render(
             <DrawerHeader />
             <Routes>
               <Route path="/" element={<Notes />} />
-              <Route path="/archive" element={<Archive />} />
-              <Route path="/trash" element={<Trash />} />
             </Routes>
           </Box>
         </Box>
