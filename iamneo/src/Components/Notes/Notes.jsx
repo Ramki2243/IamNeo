@@ -5,7 +5,7 @@ import Note from './Note';
 
 import { DataContext } from '../../Context/DataProvider';
 
-import { Box, Typography, Container, Grid } from '@mui/material';
+import { Box, Container, Grid } from '@mui/material';
 
 import { LightbulbOutlined } from '@mui/icons-material';
 

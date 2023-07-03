@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+
 
 import { Card,  CardContent,  Typography,  } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -18,7 +18,7 @@ const NoteCard = styled(Card)`
 
 const Note = ({ note }) => {
 
-    const [showActions, setShowActions] = useState(false);
+    
 
     
   
@@ -26,8 +26,7 @@ const Note = ({ note }) => {
 
     return (
       <NoteCard
-        onMouseEnter={() => setShowActions(true)}
-        onMouseLeave={() => setShowActions(false)}
+      
       >
         <CardContent sx={{ wordWrap: "break-word" }}>
           <Typography>{note.title}</Typography>
