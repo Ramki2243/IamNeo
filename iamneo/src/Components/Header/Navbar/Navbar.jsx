@@ -12,7 +12,6 @@ import {
 
 import MenuIcon from '@mui/icons-material/Menu';
 
-import logo from '../../../assets/Images/google-keep-logo.png';
 
 import { useLocation } from 'react-router-dom';
 
@@ -44,12 +43,7 @@ const Header = ({ handleDrawer, open }) => {
                     sx={{ marginRight: 5 }}>
                     <MenuIcon />
                 </IconButton>
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                    {
-                        pathName ? "" : <img src={logo} alt="logo" style={{ width: 30 }} />
-                    }
-                    <Heading>{pathName || 'Keep'}</Heading>
-                </Box>
+                
             </Toolbar>
         </Navbar>
     )

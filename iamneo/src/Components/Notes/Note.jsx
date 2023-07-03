@@ -12,7 +12,7 @@ const NoteCard = styled(Card)`
     border: 3px solid white;
     border-radius: 8px;
     color: white;
-    background-color: rgb(40,40,39);
+    background-color: rgb(40,40,50);
     &:hover {
         box-shadow: 0 2px 4px 0 green, 0 2px 6px 2px darkgreen;
     }
