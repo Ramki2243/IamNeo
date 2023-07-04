@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html{
+  font-family: sans-serif;
+  color: azure;
+}
+
+body{
+  background-color: rgb(6, 41, 13);
+}
+
+.header{
+  margin: auto -10px;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 5px 5px  rgb(255, 255, 255); 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+}
+
+.header h1{
+  color: rgb(234, 234, 234);
+  margin-left: 15px;
+  font-size: 2rem;
+}
+
+form{
+  position: relative;
+  width: 600px;
+  margin: 40px auto 60px auto;
+  padding: 10px;
+  background-color: rgba(30, 74, 99, 0.694);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 3px 5px 3px 2px rgb(0, 0, 0);
+  
+  }
+input{
+  width: 100%; 
+  color: white;
+  background-color: rgba(33, 82, 110, 0);
+  border-color:  rgba(30, 74, 99, 0);
+  box-shadow: none !important;
+  border: none;  
+  margin: 4px 10px;
+  outline: none;
+  font-size: 1.5rem;
+  resize:none;
+  margin-bottom: 20px;
+}
+
+textarea
+  {
+  width: 100%; 
+  color: white;
+  background-color: rgba(33, 82, 110, 0);
+  border-color:  rgba(30, 74, 99, 0);
+  box-shadow: none !important;
+  border: none;  
+  margin: 4px 10px;
+  outline: none;
+  font-size: 1rem;
+  resize:vertical ;
+  height: auto;
+}
+
+.note{
+  background-color:rgba(30, 74, 99, 0.694) ;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow:3px 4px 3px 2px rgb(0, 0, 0); 
+  padding: 15px;
+  margin: 16px;
+  float:left;
+}
+
+.note h1{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  }
+.note hr{
+  color:black;
+}
+.note p{
+  font-size: 1rem;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form button{
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  right: 28px;
+  bottom: -18px;
+  background: linear-gradient(180deg,rgba(30, 74, 99, 0.694) 0%, rgb(6, 41, 13) 100%);
+  color:aliceblue;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border:1px solid black;
+}
+form button:hover{
+  color:rgb(255, 255, 255);
+  background-color: greenyellow ;
+  box-shadow: 0px 1px  3px 1px black;
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+  outline:none;
+}
+
+.note button{
+  color: white;
+  background-color: rgb(107, 42, 42);
+  float: right;
+  height: 20px;
+  width: 60px;
+  box-shadow:1px 2px 1px 0px rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  cursor:pointer;
+  outline:none;
+}
+.note button:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 1px  3px 1px black;
+  border: 2px solid rgb(0, 0, 0);
+  
+}
