@@ -51,6 +51,7 @@ const Form = () => {
         let changedNote = { ...addNote, [e.target.name]: e.target.value }
         setAddNote(changedNote);
     }
+  
 
     return (
       <ClickAwayListener
